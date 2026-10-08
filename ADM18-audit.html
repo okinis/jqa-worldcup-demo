@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>監査ログ | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="ADM18-audit" data-screen-title="ADM-18 監査ログ">
+<div style="min-height: 800px; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #0B2545; color: #FFFFFF; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px">
+    <div style="display: flex; align-items: center; gap: 12px"><span style="background: #FEC84B; color: #101828; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px">管理</span><span style="font-size: 16px; font-weight: 700">[大会名] 管理画面</span></div>
+    <span style="font-size: 13px; color: #D0D5DD">[氏名] · admin</span>
+  </header>
+  <div style="flex: 1; display: flex; flex-wrap: wrap">
+    <nav aria-label="管理メニュー" style="flex: 1 1 220px; max-width: 100%; background: #FFFFFF; border-right: 1px solid #D0D5DD; padding: 16px 12px; display: flex; flex-direction: column; gap: 2px; font-size: 13px">
+      <span style="font-size: 11px; font-weight: 700; color: #475467; padding: 8px 10px 4px">全体</span>
+      <a href="ADM01-home.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">管理ホーム</a>
+      <a href="ADM02-settings.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">大会の設定</a>
+      <span style="font-size: 11px; font-weight: 700; color: #475467; padding: 12px 10px 4px">競技</span>
+      <a href="ADM03-teams.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">チーム・ロースター</a>
+      <a href="ADM04-schedule.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">日程の作成</a>
+      <a href="ADM05-officials.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">審判・ボランティア</a>
+      <a href="ADM06-shifts.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">シフト</a>
+      <span style="font-size: 11px; font-weight: 700; color: #475467; padding: 12px 10px 4px">情報発信</span>
+      <a href="ADM07-announcements.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">お知らせ</a>
+      <a href="ADM08-pages.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">ページ・催し</a>
+      <a href="ADM09-translations.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">翻訳</a>
+      <a href="ADM10-templates.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">緊急の定型文</a>
+      <span style="font-size: 11px; font-weight: 700; color: #475467; padding: 12px 10px 4px">販売</span>
+      <a href="ADM11-tickets.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">チケット</a>
+      <a href="ADM12-goods.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">グッズ</a>
+      <a href="ADM13-orders.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">注文・払い戻し</a>
+      <a href="ADM14-fees.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">参加費・請求書</a>
+      <span style="font-size: 11px; font-weight: 700; color: #475467; padding: 12px 10px 4px">その他</span>
+      <a href="ADM15-sponsors.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">スポンサー</a>
+      <a href="ADM16-lostfound.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">拾得物</a>
+      <a href="ADM17-accounts.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">アカウント・権限</a>
+      <a href="ADM18-audit.html" aria-current="page" style="padding: 8px 10px; border-radius: 8px; background: #EEF2F6; font-weight: 700; text-decoration: none">監査ログ</a>
+      <a href="ADM19-exports.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">出力</a>
+      <a href="ADM20-closing.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">大会の終了処理</a>
+    </nav>
+    <main style="flex: 999 1 560px; min-width: 0; padding: 24px; display: flex; flex-direction: column; gap: 14px">
+      <h1 style="margin: 0; font-size: 24px">監査ログ</h1>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px">
+        <select aria-label="操作の種類" style="min-height: 40px; border-radius: 8px; border: 1.5px solid #98A2B3; font-family: inherit; padding: 0 8px"><option>すべての操作</option></select>
+        <select aria-label="操作者" style="min-height: 40px; border-radius: 8px; border: 1.5px solid #98A2B3; font-family: inherit; padding: 0 8px"><option>すべての人</option></select>
+        <input type="date" aria-label="日付" style="min-height: 40px; border-radius: 8px; border: 1.5px solid #98A2B3; font-family: inherit; padding: 0 8px">
+      </div>
+      <div style="overflow-x: auto; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px">
+        <table style="width: 100%; min-width: 680px; border-collapse: collapse; font-size: 13px">
+          <thead><tr style="background: #F9FAFB; color: #475467; text-align: left"><th style="padding: 10px 12px">日時</th><th style="padding: 10px">操作者</th><th style="padding: 10px">操作</th><th style="padding: 10px">対象</th><th style="padding: 10px">詳細</th></tr></thead>
+          <tbody>
+            <tr style="border-top: 1px solid #EAECF0"><td style="padding: 10px 12px">D1 14:05</td><td style="padding: 10px">[氏名](TD)</td><td style="padding: 10px; color: #B42318; font-weight: 700">全体中断</td><td style="padding: 10px">屋外全ピッチ</td><td style="padding: 10px">理由: 雷</td></tr>
+            <tr style="border-top: 1px solid #EAECF0"><td style="padding: 10px 12px">D1 14:02</td><td style="padding: 10px">[氏名](ops)</td><td style="padding: 10px; font-weight: 700">一括遅延</td><td style="padding: 10px">ピッチ 2 #36〜</td><td style="padding: 10px">+15分 · 衝突承知 1件</td></tr>
+            <tr style="border-top: 1px solid #EAECF0"><td style="padding: 10px 12px">D1 13:51</td><td style="padding: 10px">[氏名](admin)</td><td style="padding: 10px; font-weight: 700">権限の付与</td><td style="padding: 10px">[氏名]</td><td style="padding: 10px">scorekeeper × ピッチ 3 · 本日まで</td></tr>
+            <tr style="border-top: 1px solid #EAECF0"><td style="padding: 10px 12px">D1 13:30</td><td style="padding: 10px">[氏名](TD)</td><td style="padding: 10px; font-weight: 700">結果の確定</td><td style="padding: 10px">#21</td><td style="padding: 10px">110–60</td></tr>
+            <tr style="border-top: 1px solid #EAECF0"><td style="padding: 10px 12px">D1 12:12</td><td style="padding: 10px">[氏名](ticketing)</td><td style="padding: 10px; font-weight: 700">払い戻し</td><td style="padding: 10px">[注文番号]</td><td style="padding: 10px">1 枚 · 理由: 二重購入</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin: 0; font-size: 12px; color: #475467">監査ログは編集・削除できません。</p>
+    </main>
+  </div>
+</div>
+</body>
+</html>

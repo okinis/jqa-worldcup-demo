@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>注文・払い戻し | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="ADM13-orders" data-screen-title="ADM-13 注文・払い戻し">
+<div style="min-height: 800px; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #0B2545; color: #FFFFFF; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px">
+    <div style="display: flex; align-items: center; gap: 12px"><span style="background: #FEC84B; color: #101828; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px">管理</span><span style="font-size: 16px; font-weight: 700">[大会名] 管理画面</span></div>
+    <span style="font-size: 13px; color: #D0D5DD">[氏名] · ticketing</span>
+  </header>
+  <div style="flex: 1; display: flex; flex-wrap: wrap">
+    <nav aria-label="管理メニュー" style="flex: 1 1 220px; max-width: 100%; background: #FFFFFF; border-right: 1px solid #D0D5DD; padding: 16px 12px; display: flex; flex-direction: column; gap: 2px; font-size: 13px">
+      <span style="font-size: 11px; font-weight: 700; color: #475467; padding: 8px 10px 4px">全体</span>
+      <a href="ADM01-home.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">管理ホーム</a>
+      <a href="ADM02-settings.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">大会の設定</a>
+      <span style="font-size: 11px; font-weight: 700; color: #475467; padding: 12px 10px 4px">競技</span>
+      <a href="ADM03-teams.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">チーム・ロースター</a>
+      <a href="ADM04-schedule.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">日程の作成</a>
+      <a href="ADM05-officials.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">審判・ボランティア</a>
+      <a href="ADM06-shifts.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">シフト</a>
+      <span style="font-size: 11px; font-weight: 700; color: #475467; padding: 12px 10px 4px">情報発信</span>
+      <a href="ADM07-announcements.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">お知らせ</a>
+      <a href="ADM08-pages.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">ページ・催し</a>
+      <a href="ADM09-translations.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">翻訳</a>
+      <a href="ADM10-templates.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">緊急の定型文</a>
+      <span style="font-size: 11px; font-weight: 700; color: #475467; padding: 12px 10px 4px">販売</span>
+      <a href="ADM11-tickets.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">チケット</a>
+      <a href="ADM12-goods.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">グッズ</a>
+      <a href="ADM13-orders.html" aria-current="page" style="padding: 8px 10px; border-radius: 8px; background: #EEF2F6; font-weight: 700; text-decoration: none">注文・払い戻し</a>
+      <a href="ADM14-fees.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">参加費・請求書</a>
+      <span style="font-size: 11px; font-weight: 700; color: #475467; padding: 12px 10px 4px">その他</span>
+      <a href="ADM15-sponsors.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">スポンサー</a>
+      <a href="ADM16-lostfound.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">拾得物</a>
+      <a href="ADM17-accounts.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">アカウント・権限</a>
+      <a href="ADM18-audit.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">監査ログ</a>
+      <a href="ADM19-exports.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">出力</a>
+      <a href="ADM20-closing.html" style="padding: 8px 10px; border-radius: 8px; text-decoration: none; color: #344054">大会の終了処理</a>
+    </nav>
+    <main style="flex: 999 1 560px; min-width: 0; padding: 24px; display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-start">
+      <section style="flex: 3 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+        <h1 style="margin: 0; font-size: 24px">注文・払い戻し</h1>
+        <label style="display: flex; align-items: center; gap: 8px; min-height: 44px; border: 1.5px solid #98A2B3; border-radius: 10px; padding: 0 12px; background: #FFFFFF; font-size: 14px; color: #475467"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.6"></circle><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.6"></path></svg><input type="search" placeholder="注文番号・メールアドレスで検索" aria-label="注文を検索" style="flex: 1; border: none; outline: none; font-family: inherit; font-size: 14px"></label>
+        <div style="overflow-x: auto; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px">
+          <table style="width: 100%; min-width: 520px; border-collapse: collapse; font-size: 13px">
+            <thead><tr style="background: #F9FAFB; color: #475467; text-align: left"><th style="padding: 10px 12px">注文</th><th style="padding: 10px">内容</th><th style="padding: 10px">金額</th><th style="padding: 10px">状態</th></tr></thead>
+            <tbody>
+              <tr style="border-top: 1px solid #EAECF0; background: #EEF2F6"><td style="padding: 10px 12px; font-weight: 700">[注文番号 A]</td><td style="padding: 10px">通し券 ×2, Tシャツ ×1</td><td style="padding: 10px">¥[金額]</td><td style="padding: 10px; color: #05603A; font-weight: 700">支払い済み</td></tr>
+              <tr style="border-top: 1px solid #EAECF0"><td style="padding: 10px 12px; font-weight: 700">[注文番号 B]</td><td style="padding: 10px">1日券 ×4</td><td style="padding: 10px">¥[金額]</td><td style="padding: 10px; color: #475467">一部払い戻し</td></tr>
+              <tr style="border-top: 1px solid #EAECF0"><td style="padding: 10px 12px; font-weight: 700">[注文番号 C]</td><td style="padding: 10px">招待券 ×10(スポンサー)</td><td style="padding: 10px">¥0</td><td style="padding: 10px; color: #0B2545">招待</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <form style="flex: 2 1 300px; min-width: 0; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+        <div style="font-size: 15px; font-weight: 700">払い戻し · [注文番号 A]</div>
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 13px"><input type="checkbox" checked style="width: 18px; height: 18px">通し券 #1(未使用)</label>
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 13px"><input type="checkbox" style="width: 18px; height: 18px">通し券 #2(未使用)</label>
+        <label style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #475467"><input type="checkbox" disabled style="width: 18px; height: 18px">Tシャツ M(引き渡し済み)</label>
+        <label style="display: flex; flex-direction: column; gap: 4px; font-size: 13px; font-weight: 700">理由(必須)<select style="min-height: 38px; border-radius: 8px; border: 1.5px solid #98A2B3; font-family: inherit"><option>天候による中止(規約による)</option></select></label>
+        <div style="display: flex; justify-content: space-between; font-size: 14px"><span>払い戻し額</span><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 22px">¥[金額]</span></div>
+        <span style="font-size: 12px; color: #475467">Stripe で返金します。払い戻した券の QR は無効になります。実行者と理由は監査ログに残ります。</span>
+        <button type="button" style="min-height: 44px; border-radius: 10px; border: 1.5px solid #B42318; background: #FFFFFF; color: #B42318; font-family: inherit; font-weight: 700">払い戻しを実行</button>
+      </form>
+    </main>
+  </div>
+</div>
+</body>
+</html>

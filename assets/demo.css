@@ -1,0 +1,49 @@
+/* デモ用の共通スタイル。画面そのものの見た目は各ページのインライン style が持つ */
+html { background: #E4E7EC; }
+body { margin: 0; }
+
+.demo-pill {
+  position: fixed;
+  left: 12px;
+  bottom: 88px; /* スマホ画面の下部メニュー(高さ約 70px)と重ならない位置 */
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(16, 24, 40, 0.86);
+  color: #FFFFFF !important;
+  font: 700 12px/1 'IBM Plex Sans JP', system-ui, sans-serif;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(16, 24, 40, 0.25);
+}
+.demo-pill:hover { background: #101828; }
+
+.demo-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 136px;
+  z-index: 1001;
+  transform: translate(-50%, 12px);
+  max-width: min(92vw, 520px);
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #101828;
+  color: #FFFFFF;
+  font: 500 14px/1.6 'IBM Plex Sans JP', system-ui, sans-serif;
+  box-shadow: 0 6px 20px rgba(16, 24, 40, 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.demo-toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
+
+/* スクリーンショット撮影時(?shot)はデモ用の部品を出さない */
+html.demo-shot .demo-pill,
+html.demo-shot .demo-toast { display: none !important; }
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-toast { transition: none; }
+}

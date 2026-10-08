@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>入場の読み取り | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="BOX01-gate" data-screen-title="BOX-01 入場の読み取り">
+<div style="width: 100%; max-width: 480px; margin: 0 auto; min-height: 100vh; box-sizing: border-box; background: #101828; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #101828; color: #FFFFFF; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #344054">
+    <div style="display: flex; align-items: center; gap: 10px">
+      <span style="background: #FEC84B; color: #101828; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px">受付</span>
+      <div style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">入場ゲート A</span><span style="font-size: 11px; color: #D0D5DD">本日の入場 1,284</span></div>
+    </div>
+    <span style="font-size: 12px; color: #D0D5DD; display: inline-flex; align-items: center; gap: 6px"><svg width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="4" fill="#32D583"></circle></svg>オンライン</span>
+  </header>
+
+  <div aria-label="カメラ" style="height: 330px; background: #1D2939; display: flex; align-items: center; justify-content: center; position: relative">
+    <div style="width: 210px; height: 210px; border-radius: 18px; border: 3px solid #FFFFFF; box-sizing: border-box"></div>
+    <span style="position: absolute; bottom: 14px; font-size: 13px; color: #D0D5DD">QR を枠に合わせてください</span>
+  </div>
+
+  <section aria-live="polite" style="background: #0F766E; color: #FFFFFF; padding: 22px 20px; display: flex; flex-direction: column; gap: 6px">
+    <div style="display: flex; align-items: center; gap: 12px">
+      <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true"><circle cx="22" cy="22" r="19" fill="none" stroke="currentColor" stroke-width="3"></circle><path d="M13 22.5l6 6 12-13" fill="none" stroke="currentColor" stroke-width="3.5"></path></svg>
+      <span style="font-size: 40px; font-weight: 700; line-height: 1">入場OK</span>
+    </div>
+    <div style="font-size: 16px; font-weight: 500">1日券(Day 1) · 一般エリア</div>
+    <div style="font-size: 13px; color: #CCFBEF">3枚中 2枚目 · 14:12:08</div>
+  </section>
+
+  <div style="flex: 1; background: #F5F7FA; padding: 12px; display: flex; flex-direction: column; gap: 8px">
+    <div style="font-size: 12px; font-weight: 700; color: #475467; padding: 0 4px">直前の読み取り</div>
+    <div style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; font-size: 14px">
+      <span style="display: inline-flex; align-items: center; gap: 8px; color: #B42318; font-weight: 700"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"></circle><path d="M5.5 5.5l5 5M10.5 5.5l-5 5" stroke="currentColor" stroke-width="1.6"></path></svg>使用済み</span><span style="color: #344054">10:41 にゲート B で入場済み</span>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; font-size: 14px">
+      <span style="display: inline-flex; align-items: center; gap: 8px; color: #93370D; font-weight: 700"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l7 13H1z" fill="none" stroke="currentColor" stroke-width="1.6"></path><path d="M8 6v4M8 11.6v.8" stroke="currentColor" stroke-width="1.6"></path></svg>区画が違います</span><span style="color: #344054">VIP エリアの券</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

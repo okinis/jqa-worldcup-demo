@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>画面一覧 | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0B2545; --ink: #101828; --sub: #475467; --line: #D0D5DD;
+  --ground: #F5F7FA; --amber-bg: #FEF0C7; --amber: #93370D; --teal: #0F766E; --red: #B42318;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--ground); color: var(--ink); font-family: 'IBM Plex Sans JP', system-ui, sans-serif; line-height: 1.6; }
+a { color: var(--navy); }
+.wrap { max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+header.top { background: var(--navy); color: #FFFFFF; padding: 28px 0 32px; }
+header.top h1 { margin: 6px 0 8px; font-size: clamp(24px, 4vw, 34px); line-height: 1.3; }
+header.top .eyebrow { font-size: 13px; letter-spacing: .08em; color: #D0D5DD; font-weight: 500; }
+header.top p { margin: 0; color: #EAECF0; max-width: 760px; }
+.notice { margin: 20px 0 0; background: var(--amber-bg); color: #7A2E0E; border-radius: 12px; padding: 12px 16px; font-size: 14px; }
+.notice ul { margin: 4px 0 0; padding-left: 20px; }
+h2 { font-size: 20px; margin: 36px 0 12px; }
+.personas { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.persona { display: flex; flex-direction: column; gap: 4px; background: #FFFFFF; border: 1px solid var(--line); border-radius: 14px; padding: 16px; text-decoration: none; color: inherit; min-height: 44px; }
+.persona:hover { border-color: var(--navy); }
+.persona b { font-size: 16px; color: var(--navy); }
+.persona span { font-size: 13px; color: var(--sub); }
+.persona.is-emergency { border: 2px solid var(--red); }
+.persona.is-emergency b { color: var(--red); }
+.group-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+.group-nav a { min-height: 40px; display: inline-flex; align-items: center; padding: 0 14px; border-radius: 999px; border: 1.5px solid var(--line); background: #FFFFFF; text-decoration: none; font-size: 14px; color: var(--ink); }
+.group-nav a:hover { border-color: var(--navy); }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; }
+.card { display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; text-decoration: none; color: inherit; }
+.card:hover { border-color: var(--navy); box-shadow: 0 2px 10px rgba(16,24,40,.08); }
+.thumb { aspect-ratio: 390 / 600; background: #EAECF0; overflow: hidden; display: flex; align-items: flex-start; justify-content: center; }
+.thumb img { width: 100%; height: auto; display: block; }
+.thumb.is-wide { aspect-ratio: 16 / 10; }
+.card .meta { padding: 10px 12px; display: flex; flex-direction: column; gap: 2px; }
+.card .id { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16px; color: var(--navy); }
+.card .title { font-size: 13px; }
+footer { margin: 48px 0 32px; font-size: 13px; color: var(--sub); }
+</style>
+</head>
+<body data-screen="index">
+<header class="top">
+  <div class="wrap">
+    <div class="eyebrow">QUADBALL WORLD CUP 2029 · J-VILLAGE · DEMO</div>
+    <h1>W杯運営補助システム 画面デモ</h1>
+    <p>大会当日の変更を、正しく・速く・全員に・母語に近い言語で届けるための仕組みの画面案です。スマホでも PC でも開けます。</p>
+    <div class="notice">
+      <b>これはデモです。</b>
+      <ul>
+        <li>ボタンを押しても保存・送信はされません(画面上の表示だけが変わります)</li>
+        <li>チーム名・スコア・時刻は見た目を確認するための例です。<code>[価格]</code> のような括弧は未定の値です</li>
+        <li>色・書体・ロゴは仮です(クリエイティブ担当の成果物で置き換えます)</li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <h2>立場ごとに見る</h2>
+  <div class="personas">
+    <a class="persona" href="PUB01-top.html"><b>観客・一般</b><span>トップ → いま・次 → 試合詳細。ログイン不要</span></a>
+    <a class="persona" href="P01-team.html"><b>チームの連絡係(海外)</b><span>予定変更の通知を受けて「Got it」で確認</span></a>
+    <a class="persona" href="TEAM01-setup.html"><b>チーム責任者(大会前)</b><span>ロースター・連絡係・人数・参加費の登録</span></a>
+    <a class="persona" href="OPS01-home.html"><b>当日の運営</b><span>一括遅延 → 影響の確認 → 確定</span></a>
+    <a class="persona" href="SCORE01.html"><b>スコア入力係</b><span>得点・フラッグ・中断を実際に操作できます</span></a>
+    <a class="persona" href="ADM01-home.html"><b>管理者(PC)</b><span>日程作成・審判割り当て・販売・権限</span></a>
+    <a class="persona is-emergency" href="PUB02-emergency.html"><b>雷で全体中断したとき</b><span>全員の画面がこう切り替わります</span></a>
+    <a class="persona" href="P05-display.html"><b>会場の大画面</b><span>モニターに映しっぱなしにする表示</span></a>
+  </div>
+
+  <h2>すべての画面</h2>
+  <nav class="group-nav" id="group-nav" aria-label="画面の分類"></nav>
+  <div id="catalog"></div>
+
+  <footer>
+    元の設計: docs/design/screens.md · 画面モック(Design キャンバス)から tools/build_mock_site.py で生成
+  </footer>
+</main>
+
+<script src="assets/catalog.js"></script>
+<script>
+(function () {
+  var catalog = window.DEMO_CATALOG || [];
+  var nav = document.getElementById('group-nav');
+  var root = document.getElementById('catalog');
+  var wide = /^(ADM|PC-|P05)/;
+  catalog.forEach(function (group) {
+    if (!group.items.length) return;
+    var a = document.createElement('a');
+    a.href = '#g-' + group.id;
+    a.textContent = group.name + '(' + group.items.length + ')';
+    nav.appendChild(a);
+
+    var h = document.createElement('h2');
+    h.id = 'g-' + group.id;
+    h.textContent = group.name;
+    root.appendChild(h);
+    var grid = document.createElement('div');
+    grid.className = 'grid';
+    group.items.forEach(function (item) {
+      var card = document.createElement('a');
+      card.className = 'card';
+      card.href = item.id + '.html';
+      var thumb = document.createElement('div');
+      thumb.className = 'thumb' + (wide.test(item.id) ? ' is-wide' : '');
+      var img = document.createElement('img');
+      img.loading = 'lazy';
+      img.alt = '';
+      img.src = 'thumbs/' + item.id + '.png';
+      img.onerror = function () { img.remove(); };
+      thumb.appendChild(img);
+      var meta = document.createElement('div');
+      meta.className = 'meta';
+      var parts = item.title.split(' ');
+      var id = document.createElement('span');
+      id.className = 'id';
+      id.textContent = parts.length > 1 ? parts[0] : item.id;
+      var title = document.createElement('span');
+      title.className = 'title';
+      title.textContent = parts.length > 1 ? parts.slice(1).join(' ') : item.title;
+      meta.appendChild(id);
+      meta.appendChild(title);
+      card.appendChild(thumb);
+      card.appendChild(meta);
+      grid.appendChild(card);
+    });
+    root.appendChild(grid);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>トーナメント表 | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="PUB06-bracket" data-screen-title="PUB-06 トーナメント表">
+<div style="width: 100%; max-width: 480px; margin: 0 auto; min-height: 100vh; box-sizing: border-box; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #0B2545; color: #FFFFFF; padding: 12px 16px; display: flex; align-items: center; gap: 10px">
+    <a href="PUB05-standings.html" aria-label="順位表に戻る" style="width: 44px; height: 44px; border-radius: 8px; border: 1px solid #475467; color: #FFFFFF; display: flex; align-items: center; justify-content: center; text-decoration: none"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M11 3L5 9l6 6" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+    <span style="font-size: 17px; font-weight: 700">トーナメント表</span>
+  </header>
+  <div style="padding: 10px 16px; font-size: 12px; color: #344054; background: #FFFFFF; border-bottom: 1px solid #EAECF0">横にスクロールして決勝まで見られます</div>
+
+  <div style="flex: 1; padding: 16px 0 16px 12px; display: flex; gap: 14px">
+    <div style="flex: none; width: 168px; display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 12px; font-weight: 700; color: #475467">準々決勝 · Day 3 午前</div>
+      <div style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 10px; overflow: hidden; font-size: 13px">
+        <div style="padding: 9px 10px; display: flex; justify-content: space-between; font-weight: 700; background: #ECFDF3"><span>JPN</span><span style="font-family: 'Barlow Condensed', sans-serif; font-size: 17px">110</span></div>
+        <div style="padding: 9px 10px; display: flex; justify-content: space-between; border-top: 1px solid #EAECF0; color: #475467"><span>CAN</span><span style="font-family: 'Barlow Condensed', sans-serif; font-size: 17px">60</span></div>
+      </div>
+      <div style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 10px; overflow: hidden; font-size: 13px">
+        <div style="padding: 9px 10px; display: flex; justify-content: space-between; color: #475467"><span>FRA</span><span style="font-family: 'Barlow Condensed', sans-serif; font-size: 17px">70</span></div>
+        <div style="padding: 9px 10px; display: flex; justify-content: space-between; border-top: 1px solid #EAECF0; font-weight: 700; background: #ECFDF3"><span>GER</span><span style="font-family: 'Barlow Condensed', sans-serif; font-size: 17px">90</span></div>
+      </div>
+      <div style="background: #FFFFFF; border: 1px dashed #98A2B3; border-radius: 10px; overflow: hidden; font-size: 13px; color: #344054">
+        <div style="padding: 9px 10px">Pool A 1位</div>
+        <div style="padding: 9px 10px; border-top: 1px dashed #D0D5DD">Pool D 2位</div>
+      </div>
+      <div style="background: #FFFFFF; border: 1px dashed #98A2B3; border-radius: 10px; overflow: hidden; font-size: 13px; color: #344054">
+        <div style="padding: 9px 10px">Pool C 1位</div>
+        <div style="padding: 9px 10px; border-top: 1px dashed #D0D5DD">Pool B 2位</div>
+      </div>
+    </div>
+    <div style="flex: none; width: 168px; display: flex; flex-direction: column; gap: 10px; padding-top: 44px">
+      <div style="font-size: 12px; font-weight: 700; color: #475467">準決勝 · Day 3 午後</div>
+      <div style="background: #FFFFFF; border: 2px solid #0B2545; border-radius: 10px; overflow: hidden; font-size: 13px">
+        <div style="padding: 9px 10px; display: flex; justify-content: space-between; font-weight: 700"><span>JPN</span><span style="color: #0F766E; font-size: 11px">● 試合中</span></div>
+        <div style="padding: 9px 10px; border-top: 1px solid #EAECF0; font-weight: 700">GER</div>
+      </div>
+      <div style="height: 60px"></div>
+      <div style="background: #FFFFFF; border: 1px dashed #98A2B3; border-radius: 10px; overflow: hidden; font-size: 13px; color: #344054">
+        <div style="padding: 9px 10px">準々決勝3 勝者</div>
+        <div style="padding: 9px 10px; border-top: 1px dashed #D0D5DD">準々決勝4 勝者</div>
+      </div>
+    </div>
+    <div style="flex: none; width: 60px; display: flex; flex-direction: column; gap: 10px; padding-top: 140px">
+      <div style="font-size: 12px; font-weight: 700; color: #475467">決勝</div>
+      <div style="background: #FFFFFF; border: 1px dashed #98A2B3; border-radius: 10px; height: 80px"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

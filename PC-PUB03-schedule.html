@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>日程(PC) | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="PC-PUB03-schedule" data-screen-title="PC版 PUB-03 日程(ピッチ×時刻)">
+<div style="min-height: 900px; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #0B2545; color: #FFFFFF">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 28px">
+      <div style="width: 140px; height: 40px; border-radius: 6px; border: 1.5px dashed #98A2B3; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #D0D5DD">[大会ロゴ]</div>
+      <nav aria-label="メインメニュー" style="display: flex; flex-wrap: wrap; gap: 4px; font-size: 15px">
+        <a href="PC-PUB02-now.html" style="color: #D0D5DD; text-decoration: none; padding: 10px 12px">いま</a>
+        <a href="PUB03-schedule.html" aria-current="page" style="color: #FFFFFF; text-decoration: none; font-weight: 700; padding: 10px 12px; border-bottom: 3px solid #FEC84B">日程</a>
+        <a href="PUB05-standings.html" style="color: #D0D5DD; text-decoration: none; padding: 10px 12px">順位</a>
+        <a href="PUB07-teams.html" style="color: #D0D5DD; text-decoration: none; padding: 10px 12px">チーム</a>
+        <a href="P04-newslist.html" style="color: #D0D5DD; text-decoration: none; padding: 10px 12px">お知らせ</a>
+        <a href="PUB10-info.html" style="color: #D0D5DD; text-decoration: none; padding: 10px 12px">会場案内</a>
+      </nav>
+      <button type="button" style="margin-left: auto; min-height: 44px; padding: 0 14px; border-radius: 8px; border: 1px solid #475467; background: transparent; color: #FFFFFF; font-family: inherit; font-size: 14px">日本語 ▾</button>
+    </div>
+  </header>
+  <main style="flex: 1; width: 100%; max-width: 1280px; margin: 0 auto; box-sizing: border-box; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px">
+      <div role="tablist" aria-label="日付" style="display: flex; gap: 6px">
+        <button type="button" role="tab" aria-selected="true" style="min-height: 44px; padding: 0 18px; border-radius: 10px; border: none; background: #0B2545; color: #FFFFFF; font-family: inherit; font-weight: 700">Day 1(土)</button>
+        <button type="button" role="tab" aria-selected="false" style="min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1.5px solid #D0D5DD; background: #FFFFFF; font-family: inherit">Day 2(日)</button>
+        <button type="button" role="tab" aria-selected="false" style="min-height: 44px; padding: 0 18px; border-radius: 10px; border: 1.5px solid #D0D5DD; background: #FFFFFF; font-family: inherit">Day 3(月・祝)</button>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 13px; align-items: center"><span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 14px; height: 14px; border-radius: 3px; background: #FEF0C7; border: 1.5px solid #B54708"></span>予定から動いた</span><span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 14px; height: 14px; border-radius: 3px; background: #0F766E"></span>試合中</span><select aria-label="チームで絞り込み" style="min-height: 40px; border-radius: 8px; border: 1.5px solid #98A2B3; font-family: inherit; padding: 0 8px"><option>すべてのチーム</option></select></div>
+    </div>
+    <div style="overflow-x: auto; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 14px; padding: 16px">
+      <div style="min-width: 960px; display: grid; grid-template-columns: 120px repeat(20, minmax(0, 1fr)); row-gap: 10px; font-size: 13px">
+        <span></span>
+        <span style="grid-column: span 2; color: #475467; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700">9:00</span><span style="grid-column: span 2; color: #475467; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700">10:00</span><span style="grid-column: span 2; color: #475467; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700">11:00</span><span style="grid-column: span 2; color: #475467; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700">12:00</span><span style="grid-column: span 2; color: #475467; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700">13:00</span><span style="grid-column: span 2; color: #475467; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700">14:00</span><span style="grid-column: span 2; color: #475467; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700">15:00</span><span style="grid-column: span 2; color: #475467; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700">16:00</span><span style="grid-column: span 2; color: #475467; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700">17:00</span><span style="grid-column: span 2; color: #475467; font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700">18:00</span>
+        <span style="grid-column: 1; font-weight: 700; align-self: center; color: #0B2545">スタジアム</span>
+        <span style="grid-column: 2 / span 1; background: #EEF2F6; border-radius: 6px; padding: 8px 6px; margin-right: 4px; font-weight: 700; color: #0B2545">開会式</span>
+        <span style="grid-column: 1; font-weight: 700; align-self: center">ピッチ 1</span>
+        <span style="grid-column: 3 / span 2; background: #F2F4F7; border-radius: 6px; padding: 8px 6px; margin-right: 4px; color: #475467">#1 JPN 90–50 CAN</span><span style="grid-column: 5 / span 2; background: #F2F4F7; border-radius: 6px; padding: 8px 6px; margin-right: 4px; color: #475467">#5 GER 70–60 BEL</span><span style="grid-column: 11 / span 2; background: #0F766E; color: #FFFFFF; border-radius: 6px; padding: 8px 6px; margin-right: 4px; font-weight: 700">#21 JPN–GER 60–40</span><span style="grid-column: 13 / span 2; background: #FEF0C7; border: 1.5px solid #B54708; border-radius: 6px; padding: 7px 5px; margin-right: 4px; color: #7A2E0E; font-weight: 700">#25 USA–BEL 14:40</span><span style="grid-column: 17 / span 2; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 6px; padding: 7px 5px; margin-right: 4px">#33 A1位–C2位</span>
+        <span style="grid-column: 1; font-weight: 700; align-self: center">ピッチ 2</span>
+        <span style="grid-column: 3 / span 2; background: #F2F4F7; border-radius: 6px; padding: 8px 6px; margin-right: 4px; color: #475467">#2 FRA–NED</span><span style="grid-column: 11 / span 2; background: #0F766E; color: #FFFFFF; border-radius: 6px; padding: 8px 6px; margin-right: 4px; font-weight: 700">#34 FRA–ESP 30–30</span><span style="grid-column: 13 / span 2; background: #FEF0C7; border: 1.5px solid #B54708; border-radius: 6px; padding: 7px 5px; margin-right: 4px; color: #7A2E0E; font-weight: 700">#36 AUS–NED 14:45</span><span style="grid-column: 15 / span 2; background: #FEF0C7; border: 1.5px solid #B54708; border-radius: 6px; padding: 7px 5px; margin-right: 4px; color: #7A2E0E; font-weight: 700">#37 → P4</span>
+        <span style="grid-column: 1; font-weight: 700; align-self: center">ピッチ 3</span>
+        <span style="grid-column: 3 / span 2; background: #F2F4F7; border-radius: 6px; padding: 8px 6px; margin-right: 4px; color: #475467">#3 USA–GBR</span><span style="grid-column: 12 / span 2; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 6px; padding: 7px 5px; margin-right: 4px">#27 USA–BEL 14:20</span><span style="grid-column: 15 / span 2; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 6px; padding: 7px 5px; margin-right: 4px">#29 GBR–CAN</span>
+        <span style="grid-column: 1; font-weight: 700; align-self: center">屋内</span>
+        <span style="grid-column: 2 / span 20; background: #F9FAFB; border: 1px dashed #D0D5DD; border-radius: 6px; padding: 8px 6px; color: #475467">雷雨・暑さの際の振替用</span>
+      </div>
+    </div>
+    <p style="margin: 0; font-size: 13px; color: #475467">時刻はすべて JST。試合をクリックすると試合詳細と変更履歴を表示します。スマホでは時刻順のリストに切り替わります。</p>
+  </main>
+</div>
+</body>
+</html>

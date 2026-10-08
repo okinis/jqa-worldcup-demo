@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>スコア入力 | W杯運営システム デモ</title>
+<!-- 手書きで保守する画面(tools/build_mock_site.py の変換対象外)。元のモック: docs/design/mock/src/SCORE01.dc.html -->
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css">
+<script src="assets/demo.js" defer></script>
+</head>
+<body data-screen="SCORE01" data-screen-title="SCORE-01 スコア入力">
+<div style="width: 100%; max-width: 480px; margin: 0 auto; min-height: 100vh; box-sizing: border-box; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #101828; color: #FFFFFF; padding: 12px 16px; display: flex; align-items: center; justify-content: space-between">
+    <div style="display: flex; align-items: center; gap: 10px">
+      <span style="background: #FEC84B; color: #101828; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px">スコア</span>
+      <div style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">ピッチ 2 · #34</span><span style="font-size: 11px; color: #D0D5DD">13:15 開始 · 入力: 田中</span></div>
+    </div>
+    <span id="status" style="display: inline-flex; align-items: center; gap: 5px; padding: 5px 10px; border-radius: 999px; background: #0F766E; color: #FFFFFF; font-size: 13px; font-weight: 700">試合中</span>
+  </header>
+
+  <div id="target" hidden style="background: #0F766E; color: #FFFFFF; padding: 10px 16px; font-size: 14px; font-weight: 700; text-align: center"></div>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #D0D5DD; border-bottom: 1px solid #D0D5DD">
+    <div style="background: #FFFFFF; padding: 14px 12px; display: flex; flex-direction: column; align-items: center; gap: 2px">
+      <span style="font-size: 15px; font-weight: 700">日本 JPN</span>
+      <span id="scoreA" aria-live="polite" style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 84px; line-height: 1">60</span>
+    </div>
+    <div style="background: #FFFFFF; padding: 14px 12px; display: flex; flex-direction: column; align-items: center; gap: 2px">
+      <span style="font-size: 15px; font-weight: 700">ドイツ GER</span>
+      <span id="scoreB" aria-live="polite" style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 84px; line-height: 1">40</span>
+    </div>
+  </div>
+
+  <div style="padding: 12px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px">
+    <button type="button" data-demo-skip data-team="JPN" data-pts="10" class="score-btn" style="min-height: 112px; border-radius: 16px; border: none; background: #0B2545; color: #FFFFFF; font-family: inherit; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 40px; line-height: 1">+10</span><span style="font-size: 13px">JPN 得点</span></button>
+    <button type="button" data-demo-skip data-team="GER" data-pts="10" class="score-btn" style="min-height: 112px; border-radius: 16px; border: none; background: #0B2545; color: #FFFFFF; font-family: inherit; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 40px; line-height: 1">+10</span><span style="font-size: 13px">GER 得点</span></button>
+    <button type="button" data-demo-skip data-team="JPN" data-pts="30" class="flag-btn" style="min-height: 64px; border-radius: 14px; border: 2px solid #0B2545; background: #FFFFFF; color: #0B2545; font-family: inherit; font-size: 14px; font-weight: 700">JPN フラッグ +30</button>
+    <button type="button" data-demo-skip data-team="GER" data-pts="30" class="flag-btn" style="min-height: 64px; border-radius: 14px; border: 2px solid #0B2545; background: #FFFFFF; color: #0B2545; font-family: inherit; font-size: 14px; font-weight: 700">GER フラッグ +30</button>
+  </div>
+
+  <div style="margin: 0 12px; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 10px 12px; display: flex; align-items: center; justify-content: space-between; gap: 8px">
+    <div style="display: flex; flex-direction: column; min-width: 0"><span style="font-size: 11px; color: #475467">直前の入力</span><span id="last" style="font-size: 14px; font-weight: 700">GER +10(14:11)</span></div>
+    <button type="button" data-demo-skip id="undo" style="min-height: 44px; padding: 0 16px; border-radius: 10px; border: 1.5px solid #B42318; background: #FFFFFF; color: #B42318; font-family: inherit; font-size: 14px; font-weight: 700">取消</button>
+  </div>
+
+  <div id="suspension" hidden style="margin: 12px 12px 0; background: #FEE4E2; border: 1.5px solid #B42318; border-radius: 12px; padding: 10px 12px; font-size: 13px; line-height: 1.6; color: #7A271A">
+    <b>中断の記録(IQA 3.7.1 B)</b><br>試合時間 18:42 · スコア <span id="suspScore">60–40</span><br>ペナルティボックス: GER #7(残り 0:35)<br>ボール保持: バレーボール JPN / ドッジボール JPN 1・GER 2
+  </div>
+
+  <div style="flex: 1"></div>
+
+  <div style="padding: 12px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; border-top: 1px solid #D0D5DD; background: #FFFFFF">
+    <button type="button" data-demo-skip id="suspend" style="min-height: 56px; border-radius: 12px; border: 2px solid #B42318; background: #FFFFFF; color: #B42318; font-family: inherit; font-size: 15px; font-weight: 700">中断</button>
+    <button type="button" data-demo-skip id="end" style="min-height: 56px; border-radius: 12px; border: 1.5px solid #98A2B3; background: #FFFFFF; color: #0B2545; font-family: inherit; font-size: 15px; font-weight: 700">試合終了</button>
+  </div>
+</div>
+<script>
+// スコア入力の疑似動作。得点は「記録を積む」方式(取消は直前の記録を外す)。サーバーには送らない。
+(function () {
+  var s = { a: 60, b: 40, log: [{ team: 'GER', pts: 10, at: '14:11' }], suspended: false, flagCaught: false, target: null, ended: false };
+  var $ = function (id) { return document.getElementById(id); };
+
+  function hhmm() {
+    var d = new Date();
+    return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+  }
+
+  function push(team, pts) {
+    var a = s.a + (team === 'JPN' ? pts : 0);
+    var b = s.b + (team === 'GER' ? pts : 0);
+    if (pts === 30) {
+      // フラッグキャッチ(IQA 3.5.1): 捕ったチームが上回れば終了、そうでなければ延長(目標 = 相手の得点 + 30)
+      s.flagCaught = true;
+      var catcher = team === 'JPN' ? a : b;
+      var other = team === 'JPN' ? b : a;
+      s.target = catcher > other ? null : other + 30;
+    } else if (s.target && (a >= s.target || b >= s.target)) {
+      s.ended = true; // 延長で目標スコアに到達(IQA 3.5.3)
+    }
+    s.a = a; s.b = b;
+    s.log.push({ team: team, pts: pts, at: hhmm() });
+    render();
+  }
+
+  function undo() {
+    var last = s.log.pop();
+    if (!last) return;
+    s.a -= last.team === 'JPN' ? last.pts : 0;
+    s.b -= last.team === 'GER' ? last.pts : 0;
+    if (last.pts === 30) { s.flagCaught = false; s.target = null; }
+    s.ended = false;
+    render();
+  }
+
+  function render() {
+    var ended = s.ended || (s.flagCaught && s.target === null);
+    var locked = s.suspended || ended;
+    $('scoreA').textContent = s.a;
+    $('scoreB').textContent = s.b;
+    var last = s.log[s.log.length - 1];
+    $('last').textContent = last ? last.team + (last.pts === 30 ? ' フラッグ +30' : ' +10') + '(' + last.at + ')' : 'なし';
+    var st = $('status');
+    st.textContent = s.suspended ? '中断' : ended ? '終了・暫定' : s.target ? '延長' : '試合中';
+    st.style.background = s.suspended ? '#B42318' : ended ? '#475467' : '#0F766E';
+    var t = $('target');
+    t.hidden = !(s.target && !s.suspended && !ended);
+    t.textContent = '延長: 目標スコア ' + s.target + ' 点';
+    document.querySelectorAll('.score-btn').forEach(function (btn) { btn.disabled = locked; btn.style.opacity = locked ? 0.4 : 1; });
+    document.querySelectorAll('.flag-btn').forEach(function (btn) {
+      var off = locked || s.flagCaught;
+      btn.disabled = off; btn.style.opacity = off ? 0.4 : 1;
+    });
+    $('suspension').hidden = !s.suspended;
+    $('suspScore').textContent = s.a + '–' + s.b;
+    var sb = $('suspend');
+    sb.textContent = s.suspended ? '再開する' : '中断';
+    sb.style.background = s.suspended ? '#B42318' : '#FFFFFF';
+    sb.style.color = s.suspended ? '#FFFFFF' : '#B42318';
+  }
+
+  document.querySelectorAll('.score-btn, .flag-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () { push(btn.dataset.team, Number(btn.dataset.pts)); });
+  });
+  $('undo').addEventListener('click', undo);
+  $('suspend').addEventListener('click', function () { s.suspended = !s.suspended; render(); });
+  $('end').addEventListener('click', function () {
+    s.ended = true; render();
+    if (window.demoToast) window.demoToast('試合終了を記録しました。大会ディレクターの確定待ちです(デモ)');
+  });
+  render();
+})();
+</script>
+</body>
+</html>

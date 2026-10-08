@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>デザインの方針 | W杯運営システム デモ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="Main" data-screen-title="デザインの方針(色・書体・状態)">
+<div style="width: 100%; max-width: 960px; margin: 0 auto; min-height: 100vh; box-sizing: border-box; padding: 40px 44px; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column; gap: 22px">
+  <div style="display: flex; flex-direction: column; gap: 6px">
+    <div style="font-size: 13px; font-weight: 500; color: #475467; letter-spacing: 0.08em">DESIGN DIRECTION — 仮(①クリエイティブの成果物で置き換える)</div>
+    <h1 style="margin: 0; font-size: 30px; font-weight: 700; color: #0B2545">屋外で、ひと目で、迷わない</h1>
+    <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #344054">直射日光の下でも読める高コントラスト。赤は「止まれ」専用。数字(時刻・スコア)を一番大きく。</p>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+    <div style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+      <div style="font-size: 13px; font-weight: 700; color: #475467">基本色</div>
+      <div style="display: flex; gap: 10px">
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 6px"><div style="height: 56px; border-radius: 8px; background: #0B2545"></div><div style="font-size: 12px; line-height: 1.4">濃紺 #0B2545<br><span style="color: #475467">ブランド・見出し帯・主ボタン</span></div></div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 6px"><div style="height: 56px; border-radius: 8px; background: #F5F7FA; border: 1px solid #D0D5DD"></div><div style="font-size: 12px; line-height: 1.4">地 #F5F7FA<br><span style="color: #475467">背景(白に近く眩しすぎない)</span></div></div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 6px"><div style="height: 56px; border-radius: 8px; background: #101828"></div><div style="font-size: 12px; line-height: 1.4">墨 #101828<br><span style="color: #475467">本文</span></div></div>
+      </div>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+      <div style="font-size: 13px; font-weight: 700; color: #475467">意味を持つ色(用途を固定)</div>
+      <div style="display: flex; gap: 10px">
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 6px"><div style="height: 56px; border-radius: 8px; background: #B42318"></div><div style="font-size: 12px; line-height: 1.4">赤 #B42318<br><span style="color: #475467">緊急・中断だけ</span></div></div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 6px"><div style="height: 56px; border-radius: 8px; background: #FEF0C7; border: 1px solid #F5C451"></div><div style="font-size: 12px; line-height: 1.4">琥珀 #93370D<br><span style="color: #475467">変更・遅延・重要</span></div></div>
+        <div style="flex: 1; display: flex; flex-direction: column; gap: 6px"><div style="height: 56px; border-radius: 8px; background: #0F766E"></div><div style="font-size: 12px; line-height: 1.4">緑青 #0F766E<br><span style="color: #475467">試合中・有効</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+    <div style="font-size: 13px; font-weight: 700; color: #475467">試合の状態(色+文字+形。色だけで区別しない)</div>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px">
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: #EAECF0; color: #344054; font-size: 13px; font-weight: 500"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5"></circle></svg>予定</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: #EAECF0; color: #344054; font-size: 13px; font-weight: 500"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5"></circle><circle cx="6" cy="6" r="2" fill="currentColor"></circle></svg>準備中</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: #0F766E; color: #FFFFFF; font-size: 13px; font-weight: 700"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="currentColor"></circle></svg>試合中</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: #0F766E; color: #FFFFFF; font-size: 13px; font-weight: 700"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="currentColor"></circle></svg>延長</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: #B42318; color: #FFFFFF; font-size: 13px; font-weight: 700"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><rect x="2.5" y="2" width="2.5" height="8" fill="currentColor"></rect><rect x="7" y="2" width="2.5" height="8" fill="currentColor"></rect></svg>中断</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: #FEF0C7; color: #93370D; font-size: 13px; font-weight: 700"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5"></circle><path d="M6 3.5V6l1.8 1.2" fill="none" stroke="currentColor" stroke-width="1.5"></path></svg>延期</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: #FFFFFF; color: #344054; border: 1.5px solid #667085; font-size: 13px; font-weight: 500"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.5"></path></svg>中止</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: #FFFFFF; color: #344054; border: 1.5px solid #667085; font-size: 13px; font-weight: 500"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6" stroke="currentColor" stroke-width="1.5"></path></svg>没収・放棄</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: #475467; color: #FFFFFF; font-size: 13px; font-weight: 500"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg>終了・暫定</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; background: #101828; color: #FFFFFF; font-size: 13px; font-weight: 700"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 6.2l2.3 2.3 4.7-5" fill="none" stroke="currentColor" stroke-width="1.6"></path></svg>終了・確定</span>
+    </div>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+    <div style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 13px; font-weight: 700; color: #475467">書体</div>
+      <div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 44px; line-height: 1; color: #0B2545">13:00 → 13:15 JST <span style="color: #101828">60–40</span></div>
+      <div style="font-size: 12px; color: #475467">数字: Barlow Condensed(幅が狭く、狭い画面でも大きく出せる)</div>
+      <div style="font-size: 18px; font-weight: 700">次の試合 / Next match</div>
+      <div style="font-size: 12px; color: #475467">文字: IBM Plex Sans JP(日本語と欧文を同じ骨格で)</div>
+    </div>
+    <div style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 13px; font-weight: 700; color: #475467">全画面共通の帯</div>
+      <div style="display: flex; align-items: center; gap: 8px; background: #B42318; color: #FFFFFF; border-radius: 8px; padding: 10px 12px; font-size: 13px; font-weight: 700"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l7 13H1z" fill="none" stroke="currentColor" stroke-width="1.6"></path><path d="M8 6v4M8 11.6v.8" stroke="currentColor" stroke-width="1.6"></path></svg>雷のため全試合を中断中(14:05〜)</div>
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #344054"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="none" stroke="currentColor" stroke-width="1.4"></circle><path d="M7 4v3l2 1.3" fill="none" stroke="currentColor" stroke-width="1.4"></path></svg>14:12 JST 時点の情報</div>
+      <div style="display: flex; align-items: center; gap: 8px; font-size: 13px; color: #93370D; background: #FEF0C7; border-radius: 8px; padding: 8px 10px"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M1.5 5.5a8 8 0 0111 0M3.5 8a5 5 0 017 0M6 10.5a1.5 1.5 0 012 0" fill="none" stroke="currentColor" stroke-width="1.4"></path><path d="M2 2l10 10" stroke="currentColor" stroke-width="1.4"></path></svg>オフライン: 14:03 の情報を表示中</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

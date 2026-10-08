@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Log in | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="AUTH01-login" data-screen-title="AUTH-01 ログイン">
+<div style="width: 100%; max-width: 480px; margin: 0 auto; min-height: 100vh; box-sizing: border-box; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #0B2545; color: #FFFFFF; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between">
+    <div style="width: 120px; height: 34px; border-radius: 6px; border: 1.5px dashed #98A2B3; display: flex; align-items: center; justify-content: center; font-size: 10px; color: #D0D5DD">[LOGO]</div>
+    <button type="button" aria-label="Change language (current: English)" style="min-height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #475467; background: transparent; color: #FFFFFF; font-family: inherit; font-size: 13px">English ▾</button>
+  </header>
+  <main style="flex: 1; padding: 32px 20px; display: flex; flex-direction: column; gap: 20px">
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <h1 style="margin: 0; font-size: 26px">Log in</h1>
+      <p style="margin: 0; font-size: 14px; line-height: 1.7; color: #344054">For team managers, team contacts, players, referees and volunteers. Spectators don't need to log in.</p>
+    </div>
+    <form style="display: flex; flex-direction: column; gap: 12px">
+      <label for="email" style="font-size: 14px; font-weight: 700">Email</label>
+      <input id="email" type="email" placeholder="you@example.com" style="min-height: 52px; border-radius: 12px; border: 1.5px solid #98A2B3; padding: 0 14px; font-family: inherit; font-size: 16px; background: #FFFFFF">
+      <button type="button" style="min-height: 52px; border-radius: 12px; border: none; background: #0B2545; color: #FFFFFF; font-family: inherit; font-size: 16px; font-weight: 700">Send me a login link</button>
+    </form>
+    <div style="display: flex; align-items: center; gap: 10px; color: #475467; font-size: 13px"><span style="flex: 1; height: 1px; background: #D0D5DD"></span>or<span style="flex: 1; height: 1px; background: #D0D5DD"></span></div>
+    <button type="button" style="min-height: 52px; border-radius: 12px; border: 1.5px solid #98A2B3; background: #FFFFFF; color: #101828; font-family: inherit; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 10px"><span style="width: 20px; height: 20px; border-radius: 50%; border: 1.5px dashed #98A2B3; font-size: 9px; display: flex; align-items: center; justify-content: center">G</span>Continue with Google</button>
+    <div style="background: #EEF2F6; border-radius: 12px; padding: 12px 14px; font-size: 13px; line-height: 1.7; color: #344054">No password. We only keep your email address.<br><a href="#">Privacy policy</a></div>
+  </main>
+</div>
+</body>
+</html>

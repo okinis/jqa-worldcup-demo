@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>一括遅延と影響プレビュー | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="OPS03-delay" data-screen-title="OPS-03 一括遅延 → OPS-05 影響プレビュー">
+<div style="width: 100%; max-width: 480px; margin: 0 auto; min-height: 100vh; box-sizing: border-box; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column; position: relative">
+  <header style="background: #101828; color: #FFFFFF; padding: 12px 16px; display: flex; align-items: center; gap: 10px">
+    <a href="OPS01-home.html" aria-label="運営ホームに戻る" style="width: 44px; height: 44px; border-radius: 8px; border: 1px solid #475467; color: #FFFFFF; display: flex; align-items: center; justify-content: center; text-decoration: none"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M11 3L5 9l6 6" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+    <span style="background: #FEC84B; color: #101828; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px">運営</span>
+    <span style="font-size: 16px; font-weight: 700">一括遅延</span>
+  </header>
+
+  <div style="padding: 14px 16px; display: flex; flex-direction: column; gap: 14px">
+    <fieldset style="border: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px">
+      <legend style="font-size: 13px; font-weight: 700; color: #344054; padding: 0; margin-bottom: 8px">対象</legend>
+      <div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+        <label style="min-height: 48px; border: 2px solid #0B2545; background: #EEF2F6; border-radius: 10px; display: flex; align-items: center; gap: 8px; padding: 0 12px; font-size: 14px; font-weight: 700"><input type="radio" name="scope" checked style="width: 18px; height: 18px">ピッチ 2</label>
+        <label style="min-height: 48px; border: 1.5px solid #D0D5DD; background: #FFFFFF; border-radius: 10px; display: flex; align-items: center; gap: 8px; padding: 0 12px; font-size: 14px"><input type="radio" name="scope" style="width: 18px; height: 18px">全ピッチ</label>
+      </div>
+    </fieldset>
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: #344054">起点(この試合以降)
+      <select style="min-height: 48px; border-radius: 10px; border: 1.5px solid #D0D5DD; background: #FFFFFF; padding: 0 12px; font-family: inherit; font-size: 15px; color: #101828"><option>#36 14:30 AUS–NED</option></select>
+    </label>
+    <fieldset style="border: none; margin: 0; padding: 0">
+      <legend style="font-size: 13px; font-weight: 700; color: #344054; padding: 0; margin-bottom: 8px">ずらす</legend>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px">
+        <button type="button" style="min-height: 48px; border-radius: 10px; border: 1.5px solid #D0D5DD; background: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; color: #101828">+5</button>
+        <button type="button" style="min-height: 48px; border-radius: 10px; border: 1.5px solid #D0D5DD; background: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; color: #101828">+10</button>
+        <button type="button" aria-pressed="true" style="min-height: 48px; border-radius: 10px; border: 2px solid #0B2545; background: #0B2545; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; color: #FFFFFF">+15</button>
+        <button type="button" style="min-height: 48px; border-radius: 10px; border: 1.5px solid #D0D5DD; background: #FFFFFF; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px; color: #101828">+30</button>
+      </div>
+    </fieldset>
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700; color: #344054">理由(必須)
+      <select style="min-height: 48px; border-radius: 10px; border: 1.5px solid #D0D5DD; background: #FFFFFF; padding: 0 12px; font-family: inherit; font-size: 15px; color: #101828"><option>前の試合の延長</option></select>
+    </label>
+  </div>
+
+  <div aria-hidden="true" style="position: absolute; inset: 0; background: rgba(16, 24, 40, 0.45)"></div>
+
+  <section role="dialog" aria-label="この変更で起きること" style="position: absolute; left: 0; bottom: 0; width: 100%; box-sizing: border-box; background: #FFFFFF; border-radius: 20px 20px 0 0; padding: 10px 16px 16px; display: flex; flex-direction: column; gap: 12px">
+    <div aria-hidden="true" style="align-self: center; width: 40px; height: 4px; border-radius: 2px; background: #D0D5DD"></div>
+    <div style="font-size: 17px; font-weight: 700">この変更で起きること</div>
+    <div style="display: flex; flex-direction: column; gap: 4px">
+      <div style="font-size: 12px; font-weight: 700; color: #475467">動く試合 4件(ピッチ 2)</div>
+      <div style="display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 6px 10px; font-size: 14px; align-items: center">
+        <span style="color: #475467">#36</span><span>AUS–NED</span><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px">14:30 → 14:45</span>
+        <span style="color: #475467">#37</span><span>GBR–CAN</span><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px">15:20 → 15:35</span>
+        <span style="color: #475467">#38</span><span>JPN–BEL</span><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px">16:10 → 16:25</span>
+        <span style="color: #475467">#39</span><span>ESP–USA</span><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px">17:00 → 17:15</span>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+      <div style="background: #F5F7FA; border-radius: 10px; padding: 8px; text-align: center"><div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 24px">8</div><div style="font-size: 11px; color: #475467">チーム</div></div>
+      <div style="background: #F5F7FA; border-radius: 10px; padding: 8px; text-align: center"><div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 24px">26</div><div style="font-size: 11px; color: #475467">担当者</div></div>
+      <div style="background: #F5F7FA; border-radius: 10px; padding: 8px; text-align: center"><div style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 24px">約250</div><div style="font-size: 11px; color: #475467">フォロー中</div></div>
+    </div>
+    <div style="background: #FEF0C7; color: #93370D; border-radius: 10px; padding: 10px 12px; font-size: 13px; line-height: 1.5; display: flex; gap: 8px"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" style="flex: none; margin-top: 2px"><path d="M8 1.5l7 13H1z" fill="none" stroke="currentColor" stroke-width="1.6"></path><path d="M8 6v4M8 11.6v.8" stroke="currentColor" stroke-width="1.6"></path></svg><span><b>衝突 1件</b>: #39 の終了がピッチの使用可能時間(19:00)を10分超えます</span></div>
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 8px">
+      <button type="button" style="min-height: 52px; border-radius: 12px; border: 1.5px solid #98A2B3; background: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 700; color: #0B2545">戻る</button>
+      <button type="button" style="min-height: 52px; border-radius: 12px; border: none; background: #0B2545; font-family: inherit; font-size: 15px; font-weight: 700; color: #FFFFFF">衝突を承知で確定する</button>
+    </div>
+  </section>
+</div>
+</body>
+</html>

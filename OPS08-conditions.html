@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>暑さ・雷の記録 | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="OPS08-conditions" data-screen-title="OPS-08 暑さ・雷の記録">
+<div style="width: 100%; max-width: 480px; margin: 0 auto; min-height: 100vh; box-sizing: border-box; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #101828; color: #FFFFFF; padding: 12px 16px; display: flex; align-items: center; gap: 10px">
+    <a href="OPS01-home.html" aria-label="運営ホームに戻る" style="width: 44px; height: 44px; border-radius: 8px; border: 1px solid #475467; color: #FFFFFF; display: flex; align-items: center; justify-content: center; text-decoration: none"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M11 3L5 9l6 6" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+    <span style="background: #FEC84B; color: #101828; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 4px">運営</span>
+    <span style="font-size: 16px; font-weight: 700">暑さ・雷の記録</span>
+  </header>
+  <div style="flex: 1; padding: 12px; display: flex; flex-direction: column; gap: 12px">
+    <section style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 15px; font-weight: 700">WBGT(会場で計測)</span><span style="font-size: 12px; color: #475467">30分ごと</span></div>
+      <div role="img" aria-label="WBGT の推移: 10時 26.1、11時 27.3、12時 28.6、13時 29.0、14時 29.4" style="height: 120px; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; align-items: end; border-bottom: 1px solid #D0D5DD; position: relative">
+        <div style="height: 52%; background: #98A2B3; border-radius: 4px 4px 0 0"></div>
+        <div style="height: 62%; background: #98A2B3; border-radius: 4px 4px 0 0"></div>
+        <div style="height: 74%; background: #B54708; border-radius: 4px 4px 0 0"></div>
+        <div style="height: 78%; background: #B54708; border-radius: 4px 4px 0 0"></div>
+        <div style="height: 82%; background: #B54708; border-radius: 4px 4px 0 0"></div>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; font-size: 11px; color: #475467; text-align: center"><span>10時</span><span>11時</span><span>12時</span><span>13時</span><span>14時</span></div>
+      <div style="display: flex; align-items: center; gap: 10px">
+        <label for="wbgt" style="font-size: 14px; font-weight: 700">いまの値</label>
+        <input id="wbgt" type="number" step="0.1" value="29.4" style="width: 96px; min-height: 48px; border-radius: 10px; border: 1.5px solid #98A2B3; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-size: 24px; font-weight: 700">
+        <button type="button" style="flex: 1; min-height: 48px; border-radius: 10px; border: none; background: #0B2545; color: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 700">記録する</button>
+      </div>
+      <div style="background: #FEF0C7; color: #7A2E0E; border-radius: 10px; padding: 10px 12px; font-size: 13px; line-height: 1.6"><b>厳重警戒(28〜31)</b>: 大会方針の候補 → 給水時間の追加・試合間隔の延長。31 以上で全体中断・屋内振替を検討。</div>
+    </section>
+    <section style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 14px; padding: 14px; display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 15px; font-weight: 700">雷</div>
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px; font-size: 14px"><span style="color: #475467">最後に雷鳴を確認</span><span style="font-weight: 700">— (本日なし)</span><span style="color: #475467">再開可能になる時刻</span><span style="font-weight: 700">—</span></div>
+      <button type="button" style="min-height: 52px; border-radius: 12px; border: 2px solid #B42318; background: #FFFFFF; color: #B42318; font-family: inherit; font-size: 15px; font-weight: 700">雷鳴を確認した(いま)</button>
+      <span style="font-size: 12px; color: #475467">押すと「最後の雷鳴 + 30分」で再開可能時刻を出します(大会方針の案)。全体中断は別に確定してください。</span>
+    </section>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>日程・タイムテーブル | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="PUB03-schedule" data-screen-title="PUB-03 日程・タイムテーブル">
+<div style="width: 100%; max-width: 480px; margin: 0 auto; min-height: 100vh; box-sizing: border-box; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #0B2545; color: #FFFFFF; padding: 12px 16px; display: flex; align-items: center; gap: 10px">
+    <a href="PUB01-top.html" aria-label="トップに戻る" style="width: 44px; height: 44px; border-radius: 8px; border: 1px solid #475467; color: #FFFFFF; display: flex; align-items: center; justify-content: center; text-decoration: none"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M11 3L5 9l6 6" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+    <span style="font-size: 17px; font-weight: 700">日程</span>
+  </header>
+  <div role="tablist" aria-label="日付" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: #FFFFFF; border-bottom: 1px solid #D0D5DD">
+    <button type="button" role="tab" aria-selected="true" style="min-height: 52px; border: none; border-bottom: 3px solid #0B2545; background: #FFFFFF; font-family: inherit; font-size: 14px; font-weight: 700; color: #0B2545">Day 1<br><span style="font-size: 11px; font-weight: 500">土</span></button>
+    <button type="button" role="tab" aria-selected="false" style="min-height: 52px; border: none; border-bottom: 3px solid transparent; background: #FFFFFF; font-family: inherit; font-size: 14px; color: #475467">Day 2<br><span style="font-size: 11px">日</span></button>
+    <button type="button" role="tab" aria-selected="false" style="min-height: 52px; border: none; border-bottom: 3px solid transparent; background: #FFFFFF; font-family: inherit; font-size: 14px; color: #475467">Day 3<br><span style="font-size: 11px">月・祝</span></button>
+  </div>
+  <div style="display: flex; gap: 8px; padding: 10px 12px; background: #FFFFFF; border-bottom: 1px solid #EAECF0">
+    <button type="button" aria-pressed="true" style="min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1.5px solid #0B2545; background: #0B2545; color: #FFFFFF; font-family: inherit; font-size: 12px; font-weight: 700">全試合</button>
+    <button type="button" aria-pressed="false" style="min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1.5px solid #D0D5DD; background: #FFFFFF; color: #344054; font-family: inherit; font-size: 12px">フォロー中のみ</button>
+    <button type="button" aria-pressed="false" style="min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1.5px solid #D0D5DD; background: #FFFFFF; color: #344054; font-family: inherit; font-size: 12px">ピッチ ▾</button>
+  </div>
+
+  <div style="flex: 1; padding: 8px 12px; display: flex; flex-direction: column; gap: 4px">
+    <div style="font-size: 12px; font-weight: 700; color: #475467; padding: 8px 4px 2px">08:30</div>
+    <div style="background: #EEF2F6; border-radius: 10px; padding: 10px 12px; display: flex; justify-content: space-between; font-size: 14px"><span style="font-weight: 700; color: #0B2545">開会式</span><span style="color: #475467">スタジアム</span></div>
+
+    <div style="font-size: 12px; font-weight: 700; color: #475467; padding: 8px 4px 2px">13:00 台</div>
+    <a href="PUB04-match.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 10px; padding: 10px 12px; display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; align-items: center; gap: 8px">
+      <span style="display: flex; flex-direction: column; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; line-height: 1.05"><s style="font-size: 14px; color: #B54708">13:00</s><span style="font-size: 20px; color: #93370D">13:15</span></span>
+      <span style="font-size: 14px; font-weight: 700">JPN – GER</span>
+      <span style="font-size: 12px; color: #475467">P2 · ● 試合中</span>
+    </a>
+    <a href="PUB04-match.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 10px; padding: 10px 12px; display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; align-items: center; gap: 8px">
+      <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px">13:20</span>
+      <span style="font-size: 14px; font-weight: 700">FRA – ESP</span>
+      <span style="font-size: 12px; color: #475467">P1 · ● 試合中</span>
+    </a>
+
+    <div style="font-size: 12px; font-weight: 700; color: #475467; padding: 8px 4px 2px">14:00 台</div>
+    <a href="PUB04-match.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 10px; padding: 10px 12px; display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; align-items: center; gap: 8px">
+      <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px">14:20</span>
+      <span style="font-size: 14px; font-weight: 700">USA – BEL</span>
+      <span style="font-size: 12px; color: #475467">P3 · 予定</span>
+    </a>
+    <a href="PUB04-match.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 10px; padding: 10px 12px; display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; align-items: center; gap: 8px">
+      <span style="display: flex; flex-direction: column; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; line-height: 1.05"><s style="font-size: 14px; color: #B54708">14:30</s><span style="font-size: 20px; color: #93370D">14:45</span></span>
+      <span style="font-size: 14px; font-weight: 700">AUS – NED</span>
+      <span style="font-size: 12px; color: #475467">P2 · 予定</span>
+    </a>
+
+    <div style="font-size: 12px; font-weight: 700; color: #475467; padding: 8px 4px 2px">16:00 台</div>
+    <a href="PUB04-match.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 1px dashed #98A2B3; border-radius: 10px; padding: 10px 12px; display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; align-items: center; gap: 8px">
+      <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 20px">16:40</span>
+      <span style="font-size: 14px; color: #344054">Pool A 1位 – Pool C 2位</span>
+      <span style="font-size: 12px; color: #475467">P1</span>
+    </a>
+  </div>
+  <div style="padding: 10px 16px; font-size: 12px; color: #475467; background: #FFFFFF; border-top: 1px solid #EAECF0">時刻はすべて JST · 琥珀色は元の予定から動いた試合</div>
+</div>
+</body>
+</html>

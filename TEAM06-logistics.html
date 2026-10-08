@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Arrival and headcount | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="TEAM06-logistics" data-screen-title="TEAM-06 チームの人数・到着">
+<div style="width: 100%; max-width: 480px; margin: 0 auto; min-height: 100vh; box-sizing: border-box; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #0B2545; color: #FFFFFF; padding: 12px 16px; display: flex; align-items: center; gap: 10px">
+    <a href="TEAM01-setup.html" aria-label="Back to team setup" style="width: 44px; height: 44px; border-radius: 8px; border: 1px solid #475467; color: #FFFFFF; display: flex; align-items: center; justify-content: center; text-decoration: none"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M11 3L5 9l6 6" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+    <span style="font-size: 17px; font-weight: 700">Arrival &amp; headcount</span>
+  </header>
+  <div style="margin: 12px 12px 0; background: #FEF0C7; border-radius: 12px; padding: 12px 14px; font-size: 13px; line-height: 1.6; color: #7A2E0E"><b>Numbers only.</b> Please don't enter anyone's medical, dietary or emergency-contact details here. Keep those within your team.</div>
+  <form style="flex: 1; padding: 12px; display: flex; flex-direction: column; gap: 12px">
+    <section style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 4px 14px">
+      <label style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid #EAECF0; font-size: 14px">Players<input type="number" value="18" style="width: 72px; min-height: 40px; border-radius: 8px; border: 1.5px solid #98A2B3; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700"></label>
+      <label style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid #EAECF0; font-size: 14px">Staff<input type="number" value="3" style="width: 72px; min-height: 40px; border-radius: 8px; border: 1.5px solid #98A2B3; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700"></label>
+      <label style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; border-bottom: 1px solid #EAECF0; font-size: 14px">Arrive in Japan<input type="date" value="2029-07-12" style="min-height: 40px; border-radius: 8px; border: 1.5px solid #98A2B3; padding: 0 8px; font-family: inherit; font-size: 14px"></label>
+      <label style="display: flex; justify-content: space-between; align-items: center; min-height: 56px; font-size: 14px">Leave Japan<input type="date" value="2029-07-17" style="min-height: 40px; border-radius: 8px; border: 1.5px solid #98A2B3; padding: 0 8px; font-family: inherit; font-size: 14px"></label>
+    </section>
+    <section style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 4px 14px">
+      <div style="font-size: 13px; font-weight: 700; color: #475467; padding: 10px 0 4px">Meals: how many people need…</div>
+      <label style="display: flex; justify-content: space-between; align-items: center; min-height: 52px; border-bottom: 1px solid #EAECF0; font-size: 14px">Vegetarian<input type="number" value="2" style="width: 72px; min-height: 40px; border-radius: 8px; border: 1.5px solid #98A2B3; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700"></label>
+      <label style="display: flex; justify-content: space-between; align-items: center; min-height: 52px; border-bottom: 1px solid #EAECF0; font-size: 14px">Halal<input type="number" value="0" style="width: 72px; min-height: 40px; border-radius: 8px; border: 1.5px solid #98A2B3; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700"></label>
+      <label style="display: flex; justify-content: space-between; align-items: center; min-height: 52px; font-size: 14px">Other (talk to Team Liaison)<input type="number" value="1" style="width: 72px; min-height: 40px; border-radius: 8px; border: 1.5px solid #98A2B3; text-align: center; font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700"></label>
+    </section>
+  </form>
+  <div style="padding: 12px 16px 16px; background: #FFFFFF; border-top: 1px solid #D0D5DD"><button type="button" style="width: 100%; min-height: 52px; border-radius: 12px; border: none; background: #0B2545; color: #FFFFFF; font-family: inherit; font-size: 16px; font-weight: 700">Save</button></div>
+</div>
+</body>
+</html>

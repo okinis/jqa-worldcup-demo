@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>試合詳細 | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="PUB04-match" data-screen-title="PUB-04 試合詳細(変更履歴つき)">
+<div style="width: 100%; max-width: 480px; margin: 0 auto; min-height: 100vh; box-sizing: border-box; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #0B2545; color: #FFFFFF; padding: 12px 16px; display: flex; align-items: center; gap: 10px">
+    <a href="PUB03-schedule.html" aria-label="日程に戻る" style="width: 44px; height: 44px; border-radius: 8px; border: 1px solid #475467; color: #FFFFFF; display: flex; align-items: center; justify-content: center; text-decoration: none"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M11 3L5 9l6 6" fill="none" stroke="currentColor" stroke-width="2"></path></svg></a>
+    <span style="font-size: 17px; font-weight: 700">試合 #34</span>
+    <span style="margin-left: auto; font-size: 12px; color: #D0D5DD">Pool B</span>
+  </header>
+  <section style="background: #FFFFFF; padding: 18px 16px; border-bottom: 1px solid #D0D5DD; display: flex; flex-direction: column; gap: 10px; align-items: center">
+    <span style="display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: 999px; background: #0F766E; color: #FFFFFF; font-size: 12px; font-weight: 700"><svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="currentColor"></circle></svg>試合中 · 暫定</span>
+    <div style="width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center">
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="width: 40px; height: 40px; border-radius: 50%; background: #FFFFFF; border: 6px solid #0B2545; box-sizing: border-box"></span><span style="font-size: 16px; font-weight: 700">日本</span></div>
+      <div style="text-align: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 52px; line-height: 1">60–40</div>
+      <div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="width: 40px; height: 40px; border-radius: 50%; background: #101828; border: 6px solid #D92D20; box-sizing: border-box"></span><span style="font-size: 16px; font-weight: 700">ドイツ</span></div>
+    </div>
+  </section>
+
+  <div style="flex: 1; padding: 12px; display: flex; flex-direction: column; gap: 12px">
+    <section style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 4px 14px">
+      <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #EAECF0; font-size: 14px"><span style="color: #475467">開始</span><span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 18px"><s style="color: #B54708">13:00</s> → <span style="color: #93370D">13:15 JST</span></span></div>
+      <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #EAECF0; font-size: 14px"><span style="color: #475467">ピッチ</span><span style="font-weight: 700">ピッチ 2</span></div>
+      <div style="display: flex; justify-content: space-between; padding: 10px 0; font-size: 14px"><span style="color: #475467">暑さ休憩</span><span style="font-weight: 700">あり(本日適用)</span></div>
+    </section>
+
+    <section style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 10px">
+      <div style="font-size: 14px; font-weight: 700">変更履歴</div>
+      <div style="display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 10px">
+        <span style="width: 10px; height: 10px; border-radius: 50%; background: #B54708; margin-top: 5px"></span>
+        <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #475467">12:38 · 版 2</span><span style="font-size: 14px; font-weight: 500">開始 13:00 → 13:15</span><span style="font-size: 13px; color: #344054">理由: 前の試合の延長</span></div>
+        <span style="width: 10px; height: 10px; border-radius: 50%; background: #98A2B3; margin-top: 5px"></span>
+        <div style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; color: #475467">7/1 · 版 1</span><span style="font-size: 14px; font-weight: 500">日程を公開</span></div>
+      </div>
+    </section>
+
+    <section style="background: #101828; border-radius: 12px; height: 168px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; color: #D0D5DD">
+      <svg width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="currentColor" stroke-width="2"></circle><path d="M16 13l12 7-12 7z" fill="currentColor"></path></svg>
+      <span style="font-size: 13px">[配信の埋め込み(⑫配信部門の URL)]</span>
+    </section>
+    <p style="margin: 0; font-size: 12px; color: #475467; line-height: 1.6">スコアは試合後に大会ディレクターが確定するまで「暫定」です。</p>
+  </div>
+</div>
+</body>
+</html>

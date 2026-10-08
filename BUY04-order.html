@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Your tickets | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="BUY04-order" data-screen-title="BUY-04 購入者ページ(QR)">
+<div style="width: 100%; max-width: 480px; margin: 0 auto; min-height: 100vh; box-sizing: border-box; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #0B2545; color: #FFFFFF; padding: 14px 16px; display: flex; flex-direction: column; gap: 2px">
+    <span style="font-size: 17px; font-weight: 700">Your order</span>
+    <span style="font-size: 11px; color: #D0D5DD">Order [注文番号] · paid · no login needed</span>
+  </header>
+  <div role="tablist" aria-label="Tickets" style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); background: #FFFFFF; border-bottom: 1px solid #D0D5DD">
+    <button type="button" role="tab" aria-selected="true" style="min-height: 48px; border: none; border-bottom: 3px solid #0B2545; background: #FFFFFF; font-family: inherit; font-size: 13px; font-weight: 700; color: #0B2545">Ticket 1</button>
+    <button type="button" role="tab" aria-selected="false" style="min-height: 48px; border: none; border-bottom: 3px solid transparent; background: #FFFFFF; font-family: inherit; font-size: 13px; color: #475467">Ticket 2</button>
+    <button type="button" role="tab" aria-selected="false" style="min-height: 48px; border: none; border-bottom: 3px solid transparent; background: #FFFFFF; font-family: inherit; font-size: 13px; color: #475467">Goods</button>
+  </div>
+  <div style="flex: 1; padding: 16px; display: flex; flex-direction: column; gap: 12px; align-items: center">
+    <div style="width: 100%; box-sizing: border-box; background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 16px; padding: 18px; display: flex; flex-direction: column; align-items: center; gap: 12px">
+      <span style="font-size: 16px; font-weight: 700">3-day pass · General area</span>
+      <div aria-label="QR code for ticket 1" role="img" style="width: 220px; height: 220px; padding: 12px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #EAECF0; border-radius: 8px; display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px">
+        <span style="background: #101828"></span><span style="background: #101828"></span><span style="background: #101828"></span><span></span><span style="background: #101828"></span><span></span><span style="background: #101828"></span>
+        <span style="background: #101828"></span><span></span><span style="background: #101828"></span><span style="background: #101828"></span><span></span><span style="background: #101828"></span><span></span>
+        <span style="background: #101828"></span><span style="background: #101828"></span><span></span><span></span><span style="background: #101828"></span><span style="background: #101828"></span><span style="background: #101828"></span>
+        <span></span><span style="background: #101828"></span><span style="background: #101828"></span><span style="background: #101828"></span><span></span><span></span><span style="background: #101828"></span>
+        <span style="background: #101828"></span><span></span><span></span><span style="background: #101828"></span><span style="background: #101828"></span><span style="background: #101828"></span><span></span>
+        <span style="background: #101828"></span><span style="background: #101828"></span><span style="background: #101828"></span><span></span><span style="background: #101828"></span><span></span><span style="background: #101828"></span>
+        <span style="background: #101828"></span><span></span><span style="background: #101828"></span><span style="background: #101828"></span><span></span><span style="background: #101828"></span><span style="background: #101828"></span>
+      </div>
+      <span style="font-size: 12px; color: #475467">Show this at the gate. Turn screen brightness up.</span>
+      <span style="background: #ECFDF3; color: #05603A; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 999px">Not used yet</span>
+    </div>
+    <button type="button" style="width: 100%; min-height: 52px; border-radius: 12px; border: 1.5px solid #0B2545; background: #FFFFFF; color: #0B2545; font-family: inherit; font-size: 15px; font-weight: 700">Send this ticket to a friend</button>
+    <div style="width: 100%; display: flex; justify-content: space-between; font-size: 13px"><a href="#">Receipt (PDF)</a><a href="#">Refund policy</a></div>
+  </div>
+</div>
+</body>
+</html>

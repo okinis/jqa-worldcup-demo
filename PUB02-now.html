@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>いま・次 | W杯運営システム デモ</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;700&amp;family=Barlow+Condensed:wght@600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#0B2545}a:hover{color:#101828}
+</style>
+<link rel="stylesheet" href="assets/demo.css?v=daa5579b">
+<script src="assets/demo.js?v=daa5579b" defer></script>
+</head>
+<body data-screen="PUB02-now" data-screen-title="PUB-02 いま・次(通常時)">
+<div style="width: 100%; max-width: 480px; margin: 0 auto; min-height: 100vh; box-sizing: border-box; background: #F5F7FA; color: #101828; font-family: 'IBM Plex Sans JP', sans-serif; display: flex; flex-direction: column">
+  <header style="background: #0B2545; color: #FFFFFF; padding: 14px 16px; display: flex; align-items: center; justify-content: space-between">
+    <div style="display: flex; align-items: center; gap: 10px">
+      <div style="width: 34px; height: 34px; border-radius: 6px; border: 1.5px dashed #98A2B3; display: flex; align-items: center; justify-content: center; font-size: 9px; color: #D0D5DD">ロゴ</div>
+      <div style="display: flex; flex-direction: column"><span style="font-size: 15px; font-weight: 700">いま・次</span><span style="font-size: 11px; color: #D0D5DD">Day 1 · Jヴィレッジ</span></div>
+    </div>
+    <button type="button" aria-label="言語を切り替える(現在: 日本語)" style="min-height: 44px; padding: 0 12px; border-radius: 8px; border: 1px solid #475467; background: transparent; color: #FFFFFF; font-family: inherit; font-size: 13px; font-weight: 500">日本語 ▾</button>
+  </header>
+
+  <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px; font-size: 12px; color: #344054; border-bottom: 1px solid #EAECF0; background: #FFFFFF">
+    <span style="display: inline-flex; align-items: center; gap: 6px"><svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="none" stroke="currentColor" stroke-width="1.4"></circle><path d="M7 4v3l2 1.3" fill="none" stroke="currentColor" stroke-width="1.4"></path></svg>14:12 JST 時点の情報</span>
+    <span style="display: inline-flex; align-items: center; gap: 4px; color: #93370D; font-weight: 700"><svg width="13" height="13" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="6" fill="none" stroke="currentColor" stroke-width="1.4"></circle><path d="M7 3.5v4M7 9.6v.8" stroke="currentColor" stroke-width="1.5"></path></svg>本日は暑さ休憩あり</span>
+  </div>
+
+  <div style="flex: 1; padding: 12px 12px 0; display: flex; flex-direction: column; gap: 10px">
+    <div style="font-size: 12px; font-weight: 700; color: #475467; padding: 0 4px">フォロー中のチームの試合</div>
+    <a href="PUB04-match.html" style="text-decoration: none; color: inherit; background: #FFFFFF; border: 2px solid #0B2545; border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px">
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <span style="font-size: 13px; font-weight: 700; color: #0B2545">ピッチ 1</span>
+        <span style="display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; background: #0F766E; color: #FFFFFF; font-size: 12px; font-weight: 700"><svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="currentColor"></circle></svg>試合中</span>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center">
+        <div style="font-size: 17px; font-weight: 700">日本 JPN</div>
+        <div style="text-align: center; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 40px; line-height: 1">60–40</div>
+        <div style="font-size: 17px; font-weight: 700; text-align: right">GER ドイツ</div>
+      </div>
+      <div style="display: flex; justify-content: space-between; font-size: 12px; color: #475467"><span>#21 · 開始 13:50(+10分)</span><span>暫定</span></div>
+    </a>
+
+    <div style="font-size: 12px; font-weight: 700; color: #475467; padding: 4px 4px 0">全ピッチ</div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px">
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <span style="font-size: 13px; font-weight: 700">ピッチ 2</span>
+        <span style="display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; background: #0F766E; color: #FFFFFF; font-size: 12px; font-weight: 700"><svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4" fill="currentColor"></circle></svg>試合中</span>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <span style="font-size: 15px; font-weight: 700">FRA</span>
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 30px; line-height: 1">30–30</span>
+        <span style="font-size: 15px; font-weight: 700">ESP</span>
+      </div>
+      <div style="border-top: 1px dashed #D0D5DD; padding-top: 8px; display: flex; align-items: center; justify-content: space-between; font-size: 13px">
+        <span style="color: #475467">次</span>
+        <span style="font-weight: 500">AUS vs NED</span>
+        <span style="display: inline-flex; align-items: center; gap: 6px; background: #FEF0C7; color: #93370D; border-radius: 6px; padding: 2px 8px; font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px"><s style="color: #B54708; font-weight: 600">14:30</s>14:45</span>
+      </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 14px; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px">
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <span style="font-size: 13px; font-weight: 700">ピッチ 3</span>
+        <span style="display: inline-flex; align-items: center; gap: 5px; padding: 3px 9px; border-radius: 999px; background: #EAECF0; color: #344054; font-size: 12px; font-weight: 500"><svg width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><circle cx="6" cy="6" r="4.5" fill="none" stroke="currentColor" stroke-width="1.5"></circle><circle cx="6" cy="6" r="2" fill="currentColor"></circle></svg>準備中</span>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between">
+        <span style="font-size: 15px; font-weight: 700">USA</span>
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 26px; line-height: 1; color: #344054">14:20</span>
+        <span style="font-size: 15px; font-weight: 700">BEL</span>
+      </div>
+      <div style="border-top: 1px dashed #D0D5DD; padding-top: 8px; display: flex; align-items: center; justify-content: space-between; font-size: 13px">
+        <span style="color: #475467">次</span>
+        <span style="font-weight: 500">GBR vs CAN</span>
+        <span style="font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px">15:10</span>
+      </div>
+    </div>
+
+    <div style="background: #FFFFFF; border: 1px solid #D0D5DD; border-radius: 14px; padding: 12px 14px; display: flex; align-items: center; justify-content: space-between">
+      <span style="font-size: 13px; font-weight: 700">ピッチ 4</span>
+      <span style="font-size: 13px; color: #475467">本日の試合は終了</span>
+    </div>
+  </div>
+
+  <nav aria-label="メインメニュー" style="background: #FFFFFF; border-top: 1px solid #D0D5DD; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); padding: 6px 4px 10px">
+    <a href="#" aria-current="page" style="min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #0B2545; font-size: 11px; font-weight: 700"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="8" fill="none" stroke="currentColor" stroke-width="2"></circle><circle cx="11" cy="11" r="3" fill="currentColor"></circle></svg>いま</a>
+    <a href="PUB03-schedule.html" style="min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #475467; font-size: 11px"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="3" y="4.5" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"></rect><path d="M3 9h16M7.5 2.5v4M14.5 2.5v4" stroke="currentColor" stroke-width="1.8"></path></svg>日程</a>
+    <a href="PUB05-standings.html" style="min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #475467; font-size: 11px"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 18V11M9 18V5M14 18V9M19 18V13" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"></path></svg>順位</a>
+    <a href="P04-newslist.html" style="min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #475467; font-size: 11px"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M4 9.5L16.5 4v14L4 12.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path><path d="M6.5 13l1.2 5h2.3" fill="none" stroke="currentColor" stroke-width="1.8"></path></svg>お知らせ</a>
+    <a href="P03-follow.html" style="min-height: 52px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px; text-decoration: none; color: #475467; font-size: 11px"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><path d="M6 15V10a5 5 0 0110 0v5l1.5 2h-13z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path><path d="M9.5 19.5h3" stroke="currentColor" stroke-width="1.8"></path></svg>通知</a>
+  </nav>
+</div>
+</body>
+</html>
