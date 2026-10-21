@@ -1,0 +1,8 @@
+# Cloudflare Workers（静的アセット）で wc-demo.okinis.dev に配信する
+name = "jqa-worldcup-demo"
+compatibility_date = "2026-10-01"
+routes = [{ pattern = "wc-demo.okinis.dev", custom_domain = true }]
+
+[assets]
+directory = "."
+not_found_handling = "404-page"
