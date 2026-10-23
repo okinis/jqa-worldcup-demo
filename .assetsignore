@@ -1,0 +1,11 @@
+# 配信しないファイル（Cloudflare）。作業メモ・個人の記録・設定を公開しない
+.git
+.wrangler
+wrangler.toml
+.vercelignore
+.gitignore
+.nojekyll
+CLAUDE.md
+AGENTS.md
+README.md
+*.xlsx
